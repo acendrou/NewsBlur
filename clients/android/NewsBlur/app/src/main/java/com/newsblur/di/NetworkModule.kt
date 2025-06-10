@@ -11,6 +11,7 @@ import com.newsblur.network.APIManager
 import com.newsblur.network.domain.StoriesResponse
 import com.newsblur.serialization.*
 import com.newsblur.util.AppConstants
+import com.newsblur.util.HostnameVerifierCustom
 import com.newsblur.util.NetworkUtils
 import dagger.Module
 import dagger.Provides
@@ -46,6 +47,7 @@ object NetworkModule {
         connectTimeout(AppConstants.API_CONN_TIMEOUT_SECONDS, TimeUnit.SECONDS)
         readTimeout(AppConstants.API_READ_TIMEOUT_SECONDS, TimeUnit.SECONDS)
         followSslRedirects(true)
+        hostnameVerifier(HostnameVerifierCustom())
     }.build()
 
     @Singleton

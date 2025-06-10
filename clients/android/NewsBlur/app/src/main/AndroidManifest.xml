@@ -19,6 +19,7 @@
         android:fullBackupOnly="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/newsblur"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
 
         <profileable
